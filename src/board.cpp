@@ -83,9 +83,10 @@ void Board::printBoard()
     {
         std::cout << " |";
     }
-    std::cout << "   ";
+    std::cout << "\n   ";
     for (int i = 1; i <= 7; i++)
     {
         std::cout << " " << i;
     }
+    std::cout << "\n";
 }
