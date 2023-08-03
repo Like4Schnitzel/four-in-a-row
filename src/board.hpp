@@ -9,6 +9,7 @@ class Board {
         bool checkLine(int, int, int, int, char);
     public:
         Board();
+        int getLowest(int);
         bool setInColumn(int, char);
         bool winCheck(int, int);
         void printBoard();

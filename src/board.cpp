@@ -20,14 +20,20 @@ char Board::getSlot(const int row, const int column)
     return board[row][column];
 }
 
+int Board::getLowest(const int column)
+{
+    int lowest;
+    for (lowest = 5; lowest >= 0 && board[lowest][column] != '0'; lowest--) {}
+    return lowest;
+}
+
 bool Board::setInColumn(const int column, const char player)
 {
     //check if something can be set in the column
     if (board[0][column] != '0') return false;
 
     //find lowest possible placement
-    int lowest;
-    for (lowest = 5; lowest != '0'; lowest--) {}
+    const int lowest = getLowest(column);
 
     board[lowest][column] = player;
     return true;
