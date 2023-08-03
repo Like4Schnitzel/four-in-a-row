@@ -65,3 +65,27 @@ bool Board::winCheck(const int row, const int column)
     //else
     return false;
 }
+
+void Board::printBoard()
+{
+    for (int i = 0; i < 6; i++)
+    {
+        std::cout << i + 1 << " -";
+        for (int j = 0; j < 7; j++)
+        {
+            std::cout << " " << board[i][j];
+        }
+        std::cout << "\n";
+    }
+
+    std::cout << "   ";
+    for (int i = 0; i < 7; i++)
+    {
+        std::cout << " |";
+    }
+    std::cout << "   ";
+    for (int i = 1; i <= 7; i++)
+    {
+        std::cout << " " << i;
+    }
+}
