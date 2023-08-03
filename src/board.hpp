@@ -6,7 +6,7 @@ class Board {
         char board[6][7];
     public:
         Board();
-        bool setInColumn();
+        bool setInColumn(int, char);
         bool winCheck();
         void printBoard();
 };
