@@ -27,7 +27,7 @@ int main()
             placement--;
         } while (!board.setInColumn(placement, playerNum));
         board.printBoard();
-    } while (board.winCheck(board.getLowest(placement) + 1, placement));
+    } while (!board.winCheck(board.getLowest(placement) + 1, placement));
     std::cout << "Congrats, " << *currentPlayer << ", you won!\n";
 
     return 0;

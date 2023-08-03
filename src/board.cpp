@@ -65,6 +65,7 @@ bool Board::winCheck(const int row, const int column)
 {
     const char currentPlayer = board[row][column];
     if (checkLine(row - 4, column - 4, 1, 1, currentPlayer) || //diagonal
+        checkLine(row + 4, column - 4, -1, 1, currentPlayer) || //other diagonal
         checkLine(row - 4, column, 1, 0, currentPlayer) || //vertical
         checkLine(row, column - 4, 0, 1, currentPlayer) ) // horizontal
         return true;
