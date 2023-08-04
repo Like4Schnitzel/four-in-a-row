@@ -20,12 +20,12 @@ int main()
         currentPlayer = currentPlayer == &player1 ? &player2 : &player1;
         char playerNum = currentPlayer == &player1 ? '1' : '2';
 
-        std::cout << *currentPlayer << ", where do you want to place your mark? [1-7] ";
         do 
         {
+            std::cout << *currentPlayer << ", where do you want to place your mark? [1-7] ";
             std::cin >> placement;
             placement--;
-        } while (!board.setInColumn(placement, playerNum));
+        } while (placement < 1 || placement > 7 || !board.setInColumn(placement, playerNum));
         board.printBoard();
     } while (!board.winCheck(board.getLowest(placement) + 1, placement));
     std::cout << "Congrats, " << *currentPlayer << ", you won!\n";
