@@ -13,12 +13,13 @@ int main()
     Board board;
     board.printBoard();
     std::string* currentPlayer = &player2;
+    char playerNum;
     int placement;
     do
     {
         //switch player
         currentPlayer = currentPlayer == &player1 ? &player2 : &player1;
-        char playerNum = currentPlayer == &player1 ? '1' : '2';
+        playerNum = currentPlayer == &player1 ? '1' : '2';
 
         do 
         {
